@@ -129,8 +129,11 @@ body {
   color: var(--text-color);
   font-family: "Work Sans", sans-serif;
 }
+body._lock {
+  overflow: hidden;
+}
 body header.header {
-  padding: 40px 0;
+  padding: clamp(1.25rem, 0.886rem + 1.82vw, 2.5rem) 0;
 }
 body header.header .header__container {
   display: flex;
@@ -209,6 +212,30 @@ body header.header .header__container .header__navigation .menu-icon {
 }
 
 @media (max-width: 992px) {
+  body header.header .header__container .header__navigation nav.header__menu.menu {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 80%;
+    height: 100vh;
+    display: flex;
+    background-color: var(--accent-color);
+    margin: auto;
+    overflow: auto;
+    padding: 20px 0;
+    transition: left 0.3s;
+  }
+  body header.header .header__container .header__navigation nav.header__menu.menu._active {
+    left: 0;
+  }
+  body header.header .header__container .header__navigation nav.header__menu.menu ul.menu__body {
+    flex-direction: column;
+    margin: auto;
+  }
+  body header.header .header__container .header__navigation nav.header__menu.menu ul.menu__body .menu__item .menu__link {
+    line-height: 50px;
+    font-size: 30px;
+  }
   body header.header .header__container .header__navigation .menu-icon {
     display: block;
     width: 30px;
@@ -234,16 +261,26 @@ body header.header .header__container .header__navigation .menu-icon {
     top: auto;
     bottom: 0;
   }
-  body header.header .header__container .header__navigation .menu-icon.active span {
+  body header.header .header__container .header__navigation .menu-icon._active span {
     transform: scale(0);
   }
-  body header.header .header__container .header__navigation .menu-icon.active span:first-child {
+  body header.header .header__container .header__navigation .menu-icon._active span:first-child {
     transform: rotate(-45deg);
     top: calc(50% - 1px);
   }
-  body header.header .header__container .header__navigation .menu-icon.active span:last-child {
+  body header.header .header__container .header__navigation .menu-icon._active span:last-child {
     transform: rotate(45deg);
     top: calc(50% - 1px);
+  }
+}
+@media (max-width: 575px) {
+  body header.header .header__container .header__navigation .header__buttons .header__btn {
+    padding: 7px 15px;
+  }
+}
+@media (max-width: 425px) {
+  body header.header .header__container .header__navigation .header__buttons .header__btn.login {
+    display: none;
   }
 }
 [class*=__container] {

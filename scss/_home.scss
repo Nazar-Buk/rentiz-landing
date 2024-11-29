@@ -5,8 +5,12 @@ body {
   color: var(--text-color);
   font-family: "Work Sans", sans-serif;
 
+  &._lock {
+    overflow: hidden;
+  }
+
   header.header {
-    padding: 40px 0;
+    padding: clamp(1.25rem, 0.886rem + 1.82vw, 2.5rem) 0;
 
     .header__container {
       display: flex;

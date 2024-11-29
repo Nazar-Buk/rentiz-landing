@@ -8,9 +8,31 @@
         .header__navigation {
           nav.header__menu {
             &.menu {
+              position: absolute;
+              top: 0;
+              left: -100%;
+              width: 80%;
+              height: 100vh;
+              display: flex;
+              background-color: var(--accent-color);
+              margin: auto;
+              overflow: auto;
+              padding: 20px 0;
+              transition: left 0.3s;
+
+              &._active {
+                left: 0;
+              }
+
               ul.menu__body {
+                flex-direction: column;
+                margin: auto;
+
                 .menu__item {
                   .menu__link {
+                    line-height: 50px;
+                    font-size: 30px;
+
                     &::before {
                     }
 
@@ -73,7 +95,7 @@
               }
             }
 
-            &.active {
+            &._active {
               span {
                 transform: scale(0);
 
@@ -85,6 +107,160 @@
                 &:last-child {
                   transform: rotate(45deg);
                   top: calc(50% - 1px);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  body {
+    header.header {
+      .header__container {
+        .header__logo {
+        }
+
+        .header__navigation {
+          nav.header__menu {
+            &.menu {
+              &._active {
+              }
+
+              ul.menu__body {
+                .menu__item {
+                  .menu__link {
+                    &::before {
+                    }
+
+                    // Так пишеться hover для всі пристроїв, типу коли нема курсору на мобільному ми змржемо бачити цей ефект
+                    @media (any-hover: hover) {
+                      &:hover {
+                        &::before {
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          .header__buttons {
+            .header__btn {
+              padding: 7px 15px;
+
+              &.login {
+                @media (any-hover: hover) {
+                  &:hover {
+                  }
+                }
+              }
+
+              &.register {
+                @media (any-hover: hover) {
+                  &:hover {
+                  }
+                }
+              }
+            }
+          }
+
+          .menu-icon {
+            span {
+              &:first-child {
+              }
+
+              &:last-child {
+              }
+            }
+
+            &._active {
+              span {
+                &:first-child {
+                }
+
+                &:last-child {
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  body {
+    header.header {
+      .header__container {
+        .header__logo {
+        }
+
+        .header__navigation {
+          nav.header__menu {
+            &.menu {
+              &._active {
+              }
+
+              ul.menu__body {
+                .menu__item {
+                  .menu__link {
+                    &::before {
+                    }
+
+                    // Так пишеться hover для всі пристроїв, типу коли нема курсору на мобільному ми змржемо бачити цей ефект
+                    @media (any-hover: hover) {
+                      &:hover {
+                        &::before {
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          .header__buttons {
+            .header__btn {
+              &.login {
+                display: none;
+
+                @media (any-hover: hover) {
+                  &:hover {
+                  }
+                }
+              }
+
+              &.register {
+                @media (any-hover: hover) {
+                  &:hover {
+                  }
+                }
+              }
+            }
+          }
+
+          .menu-icon {
+            span {
+              &:first-child {
+              }
+
+              &:last-child {
+              }
+            }
+
+            &._active {
+              span {
+                &:first-child {
+                }
+
+                &:last-child {
                 }
               }
             }
