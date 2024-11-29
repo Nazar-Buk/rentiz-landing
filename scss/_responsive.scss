@@ -19,6 +19,7 @@
               overflow: auto;
               padding: 20px 0;
               transition: left 0.3s;
+              z-index: 10;
 
               &._active {
                 left: 0;
@@ -114,10 +115,78 @@
         }
       }
     }
+
+    main.page {
+      .hero {
+        .hero__container {
+          flex-direction: column;
+
+          .hero__content {
+            margin-bottom: 80px;
+
+            .hero__title {
+            }
+            .hero__text {
+            }
+
+            .hero__filter {
+              width: 100%;
+              position: static;
+
+              .filter__block {
+                &.block-filter {
+                  &:nth-child(2) {
+                  }
+
+                  .block-filter__button {
+                    .block-filter__header {
+                      .block-filter__type {
+                      }
+
+                      .block-filter__icon {
+                        &._active {
+                        }
+                      }
+                    }
+
+                    .block-filter__value {
+                    }
+                  }
+
+                  .block-filter__dropdown {
+                    &._active {
+                    }
+
+                    .block-filter__item {
+                      @media (any-hover: hover) {
+                        &:hover {
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+
+              .filter__btn {
+                button {
+                  &:active {
+                  }
+                }
+              }
+            }
+          }
+
+          .hero__img {
+            img {
+            }
+          }
+        }
+      }
+    }
   }
 }
 
-@media (max-width: 575px) {
+@media (max-width: 576px) {
   body {
     header.header {
       .header__container {
@@ -186,6 +255,358 @@
                 &:last-child {
                 }
               }
+            }
+          }
+        }
+      }
+    }
+
+    main.page {
+      .hero {
+        .hero__container {
+          .hero__content {
+            margin-bottom: 40px;
+
+            .hero__title {
+            }
+            .hero__text {
+            }
+
+            .hero__filter {
+              grid-template-columns: repeat(3, 1fr); // три рази по 1fr
+              padding: 5px;
+              height: auto;
+
+              .filter__block {
+                &.block-filter {
+                  &:nth-child(2) {
+                  }
+
+                  .block-filter__button {
+                    .block-filter__header {
+                      .block-filter__type {
+                      }
+
+                      .block-filter__icon {
+                        &._active {
+                        }
+                      }
+                    }
+
+                    .block-filter__value {
+                    }
+                  }
+
+                  .block-filter__dropdown {
+                    &._active {
+                    }
+
+                    .block-filter__item {
+                      @media (any-hover: hover) {
+                        &:hover {
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+
+              .filter__btn {
+                padding: 10px;
+
+                button {
+                  padding: 10px;
+
+                  &:active {
+                  }
+                }
+              }
+            }
+          }
+
+          .hero__img {
+            img {
+            }
+          }
+        }
+
+        .hero__deco {
+          height: 300px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) and (min-width: 475px) {
+  body {
+    header.header {
+      .header__container {
+        .header__logo {
+        }
+
+        .header__navigation {
+          nav.header__menu {
+            &.menu {
+              &._active {
+              }
+
+              ul.menu__body {
+                .menu__item {
+                  .menu__link {
+                    &::before {
+                    }
+
+                    // Так пишеться hover для всі пристроїв, типу коли нема курсору на мобільному ми змржемо бачити цей ефект
+                    @media (any-hover: hover) {
+                      &:hover {
+                        &::before {
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          .header__buttons {
+            .header__btn {
+              &.login {
+                @media (any-hover: hover) {
+                  &:hover {
+                  }
+                }
+              }
+
+              &.register {
+                @media (any-hover: hover) {
+                  &:hover {
+                  }
+                }
+              }
+            }
+          }
+
+          .menu-icon {
+            span {
+              &:first-child {
+              }
+
+              &:last-child {
+              }
+            }
+
+            &._active {
+              span {
+                &:first-child {
+                }
+
+                &:last-child {
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    main.page {
+      .hero {
+        .hero__container {
+          .hero__content {
+            .hero__title {
+            }
+            .hero__text {
+            }
+
+            .hero__filter {
+              .filter__block {
+                &.block-filter {
+                  &:nth-child(2) {
+                  }
+
+                  .block-filter__button {
+                    .block-filter__header {
+                      .block-filter__type {
+                      }
+
+                      .block-filter__icon {
+                        &._active {
+                        }
+                      }
+                    }
+
+                    .block-filter__value {
+                    }
+                  }
+
+                  .block-filter__dropdown {
+                    &._active {
+                    }
+
+                    .block-filter__item {
+                      @media (any-hover: hover) {
+                        &:hover {
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+
+              .filter__btn {
+                grid-column: 1/4; // одна колонка буде займати простір 4-ох колонок
+
+                button {
+                  &:active {
+                  }
+                }
+              }
+            }
+          }
+
+          .hero__img {
+            img {
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 475px) {
+  body {
+    header.header {
+      .header__container {
+        .header__logo {
+        }
+
+        .header__navigation {
+          nav.header__menu {
+            &.menu {
+              &._active {
+              }
+
+              ul.menu__body {
+                .menu__item {
+                  .menu__link {
+                    &::before {
+                    }
+
+                    // Так пишеться hover для всі пристроїв, типу коли нема курсору на мобільному ми змржемо бачити цей ефект
+                    @media (any-hover: hover) {
+                      &:hover {
+                        &::before {
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          .header__buttons {
+            .header__btn {
+              &.login {
+                @media (any-hover: hover) {
+                  &:hover {
+                  }
+                }
+              }
+
+              &.register {
+                @media (any-hover: hover) {
+                  &:hover {
+                  }
+                }
+              }
+            }
+          }
+
+          .menu-icon {
+            span {
+              &:first-child {
+              }
+
+              &:last-child {
+              }
+            }
+
+            &._active {
+              span {
+                &:first-child {
+                }
+
+                &:last-child {
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    main.page {
+      .hero {
+        .hero__container {
+          .hero__content {
+            .hero__title {
+            }
+            .hero__text {
+            }
+
+            .hero__filter {
+              grid-template-columns: 1fr;
+              gap: 10px;
+
+              .filter__block {
+                &.block-filter {
+                  &:nth-child(2) {
+                  }
+
+                  .block-filter__button {
+                    .block-filter__header {
+                      .block-filter__type {
+                      }
+
+                      .block-filter__icon {
+                        &._active {
+                        }
+                      }
+                    }
+
+                    .block-filter__value {
+                    }
+                  }
+
+                  .block-filter__dropdown {
+                    &._active {
+                    }
+
+                    .block-filter__item {
+                      @media (any-hover: hover) {
+                        &:hover {
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+
+              .filter__btn {
+                button {
+                  &:active {
+                  }
+                }
+              }
+            }
+          }
+
+          .hero__img {
+            img {
             }
           }
         }
