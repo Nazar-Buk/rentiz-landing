@@ -337,11 +337,24 @@ body main.page .hero .hero__container .hero__img {
 }
 body main.page .hero .hero__deco {
   position: absolute;
-  bottom: -150px;
+  bottom: -240px;
   right: 0;
   z-index: -1;
 }
-
+body main.page section.featured {
+  margin-top: clamp(6.25rem, 4.614rem + 8.18vw, 11.875rem);
+}
+body main.page section.featured .featured__container .featured__box {
+  margin-top: clamp(1.875rem, 1.33rem + 2.73vw, 3.75rem);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  overflow: auto;
+}
+body main.page section.featured .featured__container .featured__box .featured__item {
+  flex: 0 0 auto;
+}
 @media (max-width: 992px) {
   body header.header .header__container .header__navigation nav.header__menu.menu {
     position: absolute;
@@ -435,6 +448,7 @@ body main.page .hero .hero__deco {
   }
   body main.page .hero .hero__deco {
     height: 300px;
+    bottom: -150px;
   }
 }
 @media (max-width: 576px) and (min-width: 475px) {
@@ -468,4 +482,12 @@ body main.page .hero .hero__deco {
 .filter {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 165px;
+}
+
+.title {
+  color: var(--border-color-light);
+  font-size: clamp(1.875rem, 1.548rem + 1.64vw, 3rem);
+  font-weight: 600;
+  line-height: 1.26;
+  text-transform: capitalize;
 }/*# sourceMappingURL=main.css.map */
