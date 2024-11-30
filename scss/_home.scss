@@ -259,9 +259,34 @@ body {
       }
       .hero__deco {
         position: absolute;
-        bottom: -150px;
+        bottom: -240px;
         right: 0;
         z-index: -1;
+      }
+    }
+
+    section.featured {
+      margin-top: clamp(6.25rem, 4.614rem + 8.18vw, 11.875rem);
+
+      .featured__container {
+        .featured__title {
+        }
+
+        .featured__box {
+          margin-top: clamp(1.875rem, 1.33rem + 2.73vw, 3.75rem);
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          gap: 30px;
+          overflow: auto;
+
+          .featured__item {
+            flex: 0 0 auto; // забороняю змінюватися розміру кртинок, вони будуть такого розміру, якого я їх скачав
+
+            img.featured__img {
+            }
+          }
+        }
       }
     }
   }
