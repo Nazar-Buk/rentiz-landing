@@ -420,6 +420,18 @@ body main.page section.popular .popular__container .popular__slider .slider-butt
   border-radius: 50%;
   background: url("../img/popular-slider/arrow-slider.svg") left 30px center no-repeat;
 }
+body main.page section.popular .popular__container .popular__link {
+  text-align: center;
+}
+body main.page section.popular .popular__container .popular__link a {
+  display: inline-block;
+  margin-top: clamp(1.875rem, 0.784rem + 5.45vw, 5.625rem);
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--text-color-light);
+  padding: 22px 42px;
+  background-color: var(--accent-color);
+}
 
 @media (max-width: 1800px) {
   body main.page section.popular .popular__container .popular__slider .slider-buttons {
