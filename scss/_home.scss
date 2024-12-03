@@ -289,5 +289,97 @@ body {
         }
       }
     }
+
+    section.popular {
+      margin-top: clamp(3.75rem, 2.295rem + 7.27vw, 8.75rem);
+      background: #1a242f url("../img/popular-slider/slider-bg.png") center
+        center/cover no-repeat; // Те що наперед можна було поставити колір, то відкриття для мене, цей колір має бути десь біля маска в Rectangle
+
+      .popular__container {
+        padding: clamp(1.875rem, -0.489rem + 11.82vw, 10rem) 15px;
+
+        .popular__title {
+          margin-bottom: 40px;
+        }
+
+        .popular__slider {
+          position: relative;
+
+          .swiper.popular-slider {
+            overflow: hidden;
+
+            .swiper-wrapper {
+              display: inline-flex; // то важно
+              // gap: 20px;
+
+              .swiper-slide.popular-slide {
+                display: flex;
+                flex-direction: column;
+                gap: 27px;
+
+                .popular-slide__thumb {
+                  img {
+                  }
+                }
+                .popular-slide__text {
+                  .popular-slide__title {
+                    color: var(--text-color-light);
+                    font-size: 26px;
+                    letter-spacing: 1%;
+                    font-weight: 600;
+                    line-height: 1.26;
+                  }
+                  .popular-slide__desc {
+                  }
+                }
+
+                .popular-slide__labels {
+                  display: flex;
+                  gap: 20px;
+
+                  .popular-slide__label {
+                    font-weight: 400;
+                    display: flex;
+                    align-items: center;
+                    gap: 4px;
+
+                    img {
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          .slider-buttons {
+            position: absolute;
+            top: 30%;
+            // transform: translateY(-50%);
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+
+            .swiper-button-prev {
+              position: absolute;
+              left: -130px;
+            }
+            .swiper-button-next {
+              position: absolute;
+              transform: rotate(180deg);
+              right: -130px;
+            }
+            .popular-slider-btn {
+              cursor: pointer;
+              width: 78px;
+              height: 78px;
+              border: 1px solid rgba(169, 173, 177, 0.8);
+              border-radius: 50%;
+              background: url("../img/popular-slider/arrow-slider.svg") left
+                30px center no-repeat;
+            }
+          }
+        }
+      }
+    }
   }
 }
