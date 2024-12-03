@@ -37,3 +37,43 @@ if (filter) {
     });
   });
 }
+
+//////////////////// -- SWIPER -- ////////////////////
+const swiper = new Swiper(".popular-slider", {
+  spaceBetween: 20,
+  slidesPerView: 1,
+  loop: true,
+
+  // Navigation arrows
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  breakpoints: {
+    //example
+
+    // // when window width is >= 320px
+    // 320: {
+    //   slidesPerView: 2,
+    //   spaceBetween: 20
+    // },
+    // // when window width is >= 480px
+    // 480: {
+    //   slidesPerView: 3,
+    //   spaceBetween: 30
+    // },
+    // // when window width is >= 640px
+    // 640: {
+    //   slidesPerView: 4,
+    //   spaceBetween: 40
+    // }
+
+    992: {
+      slidesPerView: 3,
+    },
+
+    660: {
+      slidesPerView: 2,
+    },
+  },
+});
