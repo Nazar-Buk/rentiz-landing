@@ -403,11 +403,11 @@ body main.page section.popular .popular__container .popular__slider .slider-butt
   justify-content: space-between;
   width: 100%;
 }
-body main.page section.popular .popular__container .popular__slider .slider-buttons .swiper-button-prev {
+body main.page section.popular .popular__container .popular__slider .slider-buttons .popular-slider-prev {
   position: absolute;
   left: -130px;
 }
-body main.page section.popular .popular__container .popular__slider .slider-buttons .swiper-button-next {
+body main.page section.popular .popular__container .popular__slider .slider-buttons .popular-slider-next {
   position: absolute;
   transform: rotate(180deg);
   right: -130px;
@@ -426,11 +426,152 @@ body main.page section.popular .popular__container .popular__link {
 body main.page section.popular .popular__container .popular__link a {
   display: inline-block;
   margin-top: clamp(1.875rem, 0.784rem + 5.45vw, 5.625rem);
-  font-size: 24px;
+  font-size: clamp(1.25rem, 1.177rem + 0.36vw, 1.5rem);
   font-weight: 500;
   color: var(--text-color-light);
   padding: 22px 42px;
   background-color: var(--accent-color);
+}
+@media (any-hover: hover) {
+  body main.page section.popular .popular__container .popular__link a:hover {
+    background-color: teal;
+  }
+}
+body main.page section.why {
+  padding-top: clamp(1.875rem, -0.852rem + 13.64vw, 11.25rem);
+}
+body main.page section.why .why__container .why__title {
+  text-align: center;
+  margin-bottom: clamp(0.938rem, 0.119rem + 4.09vw, 3.75rem);
+}
+body main.page section.why .why__container .why__body {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: clamp(0.938rem, 0.301rem + 3.18vw, 3.125rem);
+}
+body main.page section.why .why__container .why__body .why__item.item-why {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  flex: 0 0 26.4788732394%;
+}
+body main.page section.why .why__container .why__body .why__item.item-why .item-why__img {
+  width: clamp(6.25rem, 4.795rem + 7.27vw, 11.25rem);
+  height: clamp(6.25rem, 4.795rem + 7.27vw, 11.25rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 36px;
+}
+body main.page section.why .why__container .why__body .why__item.item-why .item-why__img::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 50%;
+  position: absolute;
+  background-color: var(--accent-color);
+  opacity: 0.12;
+}
+body main.page section.why .why__container .why__body .why__item.item-why .item-why__img img {
+  width: clamp(3rem, 2.564rem + 2.18vw, 4.5rem);
+  height: clamp(3rem, 2.564rem + 2.18vw, 4.5rem);
+}
+body main.page section.why .why__container .why__body .why__item.item-why .item-why__title {
+  color: var(--text-color-light);
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 1.26;
+  text-transform: capitalize;
+}
+body main.page section.why .why__container .why__body .why__item.item-why .item-why__text {
+  margin-top: 11px;
+}
+body main.page section.reviews {
+  position: relative;
+}
+body main.page section.reviews .reviews-deco {
+  position: absolute;
+  top: -510px;
+  left: 0;
+  z-index: -1;
+}
+body main.page section.reviews .reviews__container {
+  max-width: 1018px;
+  margin: 0 auto;
+  position: relative;
+}
+body main.page section.reviews .reviews__container .reviews__quotes {
+  font-size: 260px;
+  line-height: 1.47;
+  font-weight: 400;
+  color: var(--accent-color);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+body main.page section.reviews .reviews__container .reviews__slider.slider-reviews {
+  position: relative;
+  padding-top: 178px;
+  display: flex;
+  overflow: hidden;
+}
+body main.page section.reviews .reviews__container .reviews__slider.slider-reviews .swiper-wrapper {
+  display: inline-flex;
+  align-items: flex-start;
+}
+body main.page section.reviews .reviews__container .reviews__slider.slider-reviews .swiper-wrapper .slider-reviews__slide .slider-reviews__text {
+  font-size: clamp(1.25rem, 1.032rem + 1.09vw, 2rem);
+  font-weight: 400;
+  line-height: 1.57;
+  color: var(--text-color-light);
+  text-transform: capitalize;
+}
+body main.page section.reviews .reviews__container .reviews__slider.slider-reviews .swiper-wrapper .slider-reviews__slide .slider-reviews__info {
+  margin-top: 40px;
+}
+body main.page section.reviews .reviews__container .reviews__slider.slider-reviews .swiper-wrapper .slider-reviews__slide .slider-reviews__info .slider-reviews__name {
+  font-size: clamp(1rem, 0.891rem + 0.55vw, 1.375rem);
+  font-weight: 600;
+  line-height: 1.26;
+  letter-spacing: 1%;
+  color: var(--text-color-light);
+}
+body main.page section.reviews .reviews__container .reviews__slider.slider-reviews .wrap-slider-buttons {
+  position: absolute;
+  right: 15px;
+  bottom: 0;
+}
+body main.page section.reviews .reviews__container .reviews__slider.slider-reviews .wrap-slider-buttons .slider-reviews__buttons {
+  display: flex;
+  gap: 71px;
+  width: 115px;
+  position: relative;
+  height: 60px;
+  align-items: center;
+}
+body main.page section.reviews .reviews__container .reviews__slider.slider-reviews .wrap-slider-buttons .slider-reviews__buttons::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  background-color: #353f49;
+  width: 1px;
+}
+body main.page section.reviews .reviews__container .reviews__slider.slider-reviews .wrap-slider-buttons .slider-reviews__buttons .slider-reviews__btn.swiper-button-disabled svg {
+  fill: #767f89;
+}
+body main.page section.reviews .reviews__container .reviews__slider.slider-reviews .wrap-slider-buttons .slider-reviews__buttons .slider-reviews-prev {
+  transform: translateY(-2px) rotate(-180deg);
+}
+body main.page section.reviews .reviews__container .reviews__slider.slider-reviews .wrap-slider-buttons .slider-reviews__buttons .slider-reviews-prev svg {
+  fill: var(--text-color-light);
+}
+body main.page section.reviews .reviews__container .reviews__slider.slider-reviews .wrap-slider-buttons .slider-reviews__buttons .slider-reviews-next svg {
+  fill: var(--text-color-light);
 }
 
 @media (max-width: 1800px) {
@@ -515,6 +656,15 @@ body main.page section.popular .popular__container .popular__link a {
   body main.page .hero .hero__container .hero__content .hero__filter {
     width: 100%;
     position: static;
+  }
+}
+@media (max-width: 768px) {
+  body main.page section.why .why__container .why__title {
+    margin-bottom: 30px;
+  }
+  body main.page section.why .why__container .why__body {
+    flex-direction: column;
+    gap: 20px;
   }
 }
 @media (max-width: 660px) {

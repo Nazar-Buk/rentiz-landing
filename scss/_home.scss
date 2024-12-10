@@ -359,11 +359,11 @@ body {
             justify-content: space-between;
             width: 100%;
 
-            .swiper-button-prev {
+            .popular-slider-prev {
               position: absolute;
               left: -130px;
             }
-            .swiper-button-next {
+            .popular-slider-next {
               position: absolute;
               transform: rotate(180deg);
               right: -130px;
@@ -386,11 +386,197 @@ body {
           a {
             display: inline-block;
             margin-top: clamp(1.875rem, 0.784rem + 5.45vw, 5.625rem);
-            font-size: 24px;
+            font-size: clamp(1.25rem, 1.177rem + 0.36vw, 1.5rem);
             font-weight: 500;
             color: var(--text-color-light);
             padding: 22px 42px;
             background-color: var(--accent-color);
+
+            @media (any-hover: hover) {
+              &:hover {
+                background-color: teal;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    section.why {
+      padding-top: clamp(1.875rem, -0.852rem + 13.64vw, 11.25rem);
+
+      .why__container {
+        .why__title {
+          text-align: center;
+          margin-bottom: clamp(0.938rem, 0.119rem + 4.09vw, 3.75rem);
+        }
+
+        .why__body {
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-start;
+          gap: clamp(0.938rem, 0.301rem + 3.18vw, 3.125rem);
+
+          .why__item.item-why {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            flex: 0 0 calc(376px / 1420px * 100%);
+
+            .item-why__img {
+              width: clamp(6.25rem, 4.795rem + 7.27vw, 11.25rem);
+              height: clamp(6.25rem, 4.795rem + 7.27vw, 11.25rem);
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              position: relative;
+              margin-bottom: 36px;
+
+              &::before {
+                content: "";
+                width: 100%;
+                height: 100%;
+                display: block;
+                border-radius: 50%;
+                position: absolute;
+                background-color: var(--accent-color);
+                opacity: 0.12;
+              }
+
+              img {
+                // width: 72px;
+                // height: 72px;
+                width: clamp(3rem, 2.564rem + 2.18vw, 4.5rem);
+                height: clamp(3rem, 2.564rem + 2.18vw, 4.5rem);
+              }
+            }
+
+            .item-why__title {
+              color: var(--text-color-light);
+              font-size: 26px;
+              font-weight: 600;
+              line-height: 1.26;
+              text-transform: capitalize;
+            }
+            .item-why__text {
+              margin-top: 11px;
+            }
+          }
+        }
+      }
+    }
+
+    section.reviews {
+      position: relative;
+
+      .reviews-deco {
+        position: absolute;
+        top: -510px;
+        left: 0;
+        z-index: -1;
+      }
+
+      .reviews__container {
+        max-width: 1018px;
+        margin: 0 auto;
+        position: relative;
+
+        .reviews__quotes {
+          font-size: 260px;
+          line-height: 1.47;
+          font-weight: 400;
+          color: var(--accent-color);
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+
+        .reviews__slider.slider-reviews {
+          position: relative;
+          padding-top: 178px;
+          display: flex;
+          overflow: hidden;
+
+          .swiper-wrapper {
+            display: inline-flex;
+            align-items: flex-start; // якщо слайд має більше тексту ніж інші то висота інших буде меншою ніж його, в js теж заглянь
+
+            .slider-reviews__slide {
+              .slider-reviews__text {
+                font-size: clamp(1.25rem, 1.032rem + 1.09vw, 2rem);
+                font-weight: 400;
+                line-height: 1.57;
+                color: var(--text-color-light);
+                text-transform: capitalize;
+              }
+
+              .slider-reviews__info {
+                margin-top: 40px;
+
+                .slider-reviews__name {
+                  font-size: clamp(1rem, 0.891rem + 0.55vw, 1.375rem);
+                  font-weight: 600;
+                  line-height: 1.26;
+                  letter-spacing: 1%;
+                  color: var(--text-color-light);
+                }
+                .slider-reviews__job {
+                  // line-height: 1.7;
+                  // font-size: 18px;
+                  // font-weight: 400;
+                }
+              }
+            }
+          }
+
+          .wrap-slider-buttons {
+            position: absolute;
+            right: 15px;
+            bottom: 0;
+
+            .slider-reviews__buttons {
+              display: flex;
+              gap: 71px;
+              width: 115px;
+              position: relative;
+              height: 60px;
+              align-items: center;
+
+              &::before {
+                content: "";
+                position: absolute;
+                // top: 0;
+                // bottom: 0;
+                left: 50%;
+                background-color: #353f49;
+                width: 1px;
+              }
+
+              .slider-reviews__btn {
+                &.swiper-button-disabled {
+                  // кнопка слайдера стає не активною, цей клас swiper-button-disabled є від swiper
+                  svg {
+                    fill: #767f89;
+                  }
+                }
+              }
+
+              .slider-reviews-prev {
+                transform: translateY(-2px) rotate(-180deg);
+
+                svg {
+                  fill: var(--text-color-light);
+                }
+              }
+
+              .slider-reviews-next {
+                svg {
+                  fill: var(--text-color-light);
+                }
+              }
+            }
           }
         }
       }
