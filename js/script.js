@@ -115,5 +115,3 @@ if (galleryItems.length > 0) {
     });
   });
 }
-
-console.log(galleryItems, "galleryItems");
