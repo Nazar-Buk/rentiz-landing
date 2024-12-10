@@ -40,10 +40,6 @@
               width: auto; // то шось важливе, стрілочки стали одна біля одної
               gap: 30px;
 
-              .swiper-button-prev {
-              }
-              .swiper-button-next {
-              }
               .popular-slider-btn {
                 position: static;
               }
@@ -243,6 +239,43 @@
   }
 }
 
+@media (max-width: 768px) {
+  body {
+    &._lock {
+    }
+
+    main.page {
+      section.why {
+        .why__container {
+          .why__title {
+            margin-bottom: 30px;
+          }
+
+          .why__body {
+            flex-direction: column;
+            gap: 20px;
+
+            .why__item.item-why {
+              .item-why__img {
+                &::before {
+                }
+
+                img {
+                }
+              }
+
+              .item-why__title {
+              }
+              .item-why__text {
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 660px) {
   body {
     &._lock {
@@ -287,10 +320,6 @@
             .slider-buttons {
               display: none;
 
-              .swiper-button-prev {
-              }
-              .swiper-button-next {
-              }
               .popular-slider-btn {
               }
             }

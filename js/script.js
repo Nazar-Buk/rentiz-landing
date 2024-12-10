@@ -39,15 +39,15 @@ if (filter) {
 }
 
 //////////////////// -- SWIPER -- ////////////////////
-const swiper = new Swiper(".popular-slider", {
+const popularSlider = new Swiper(".popular-slider", {
   spaceBetween: 20,
   slidesPerView: 1,
   loop: true,
 
   // Navigation arrows
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".popular-slider-next",
+    prevEl: ".popular-slider-prev",
   },
   breakpoints: {
     //example
@@ -75,5 +75,26 @@ const swiper = new Swiper(".popular-slider", {
     660: {
       slidesPerView: 2,
     },
+  },
+});
+
+//////////////////// -- SWIPER -- ////////////////////
+const reviewsSlider = new Swiper(".slider-reviews", {
+  spaceBetween: 20,
+  slidesPerView: 1,
+  autoHeight: true, // якщо слайд має більше тексту ніж інші то висота інших буде меншою ніж його
+
+  // Navigation arrows
+  navigation: {
+    nextEl: ".slider-reviews-next",
+    prevEl: ".slider-reviews-prev",
+  },
+  breakpoints: {
+    // 992: {
+    //   slidesPerView: 3,
+    // },
+    // 660: {
+    //   slidesPerView: 2,
+    // },
   },
 });
