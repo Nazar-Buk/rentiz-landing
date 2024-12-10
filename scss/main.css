@@ -493,6 +493,7 @@ body main.page section.why .why__container .why__body .why__item.item-why .item-
 }
 body main.page section.reviews {
   position: relative;
+  margin-bottom: clamp(1.875rem, 0.33rem + 7.73vw, 7.188rem);
 }
 body main.page section.reviews .reviews-deco {
   position: absolute;
@@ -572,6 +573,50 @@ body main.page section.reviews .reviews__container .reviews__slider.slider-revie
 }
 body main.page section.reviews .reviews__container .reviews__slider.slider-reviews .wrap-slider-buttons .slider-reviews__buttons .slider-reviews-next svg {
   fill: var(--text-color-light);
+}
+body main.page section.gallery {
+  background: linear-gradient(270deg, rgb(26, 36, 47) 0%, rgba(26, 36, 47, 0) 100%);
+  padding: clamp(1.875rem, -0.489rem + 11.82vw, 10rem) 0;
+}
+body main.page section.gallery .gallery__container {
+  display: flex;
+  align-items: center;
+  gap: 63px;
+}
+body main.page section.gallery .gallery__container .gallery__box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  width: 50%;
+}
+body main.page section.gallery .gallery__container .gallery__box .gallery__item {
+  aspect-ratio: 350/551; /* 350/551 */
+  position: relative;
+  overflow: hidden;
+  flex: 0 0 47%;
+}
+body main.page section.gallery .gallery__container .gallery__box .gallery__item .swiper-wrapper {
+  display: inline-flex;
+}
+body main.page section.gallery .gallery__container .gallery__box .gallery__item img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+}
+body main.page section.gallery .gallery__container .gallery__info .gallety__text {
+  margin-top: 22px;
+}
+body main.page section.gallery .gallery__container .gallery__info .gallery__link {
+  display: inline-block;
+  margin-top: 45px;
+  padding: 22px 42px;
+  color: var(--text-color-light);
+  background-color: var(--accent-color);
+  font-weight: 500;
+  font-size: 24px;
+  text-decoration: none;
 }
 
 @media (max-width: 1800px) {
@@ -657,6 +702,17 @@ body main.page section.reviews .reviews__container .reviews__slider.slider-revie
     width: 100%;
     position: static;
   }
+  body main.page section.gallery .gallery__container {
+    flex-direction: column;
+  }
+  body main.page section.gallery .gallery__container .gallery__box {
+    width: 100%;
+  }
+}
+@media (min-width: 992px) {
+  body main.page section.gallery .gallery__container .gallery__info .gallery__title {
+    max-width: 520px;
+  }
 }
 @media (max-width: 768px) {
   body main.page section.why .why__container .why__title {
@@ -713,6 +769,13 @@ body main.page section.reviews .reviews__container .reviews__slider.slider-revie
   body main.page .hero .hero__container .hero__content .hero__filter {
     grid-template-columns: 1fr;
     gap: 10px;
+  }
+  body main.page section.reviews .reviews-deco {
+    width: 300px;
+  }
+  body main.page section.gallery .gallery__container .gallery__info .gallery__link {
+    display: block;
+    text-align: center;
   }
 }
 @media (max-width: 425px) {

@@ -470,6 +470,7 @@ body {
 
     section.reviews {
       position: relative;
+      margin-bottom: clamp(1.875rem, 0.33rem + 7.73vw, 7.188rem);
 
       .reviews-deco {
         position: absolute;
@@ -577,6 +578,75 @@ body {
                 }
               }
             }
+          }
+        }
+      }
+    }
+
+    section.gallery {
+      background: linear-gradient(
+        270deg,
+        rgba(26, 36, 47, 1) 0%,
+        rgba(26, 36, 47, 0) 100%
+      );
+      padding: clamp(1.875rem, -0.489rem + 11.82vw, 10rem) 0;
+
+      .gallery__container {
+        display: flex;
+        align-items: center;
+        gap: 63px;
+
+        .gallery__box {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 20px;
+          // 720 бо 350 * 2 + 20 gap
+          width: calc(
+            720px / 1440px * 100%
+          ); // це теж треба, бо без width, не буде працювати aspect-ratio
+
+          .gallery__item {
+            // aspect-ratio: 7/11; //  ширина / висота
+            aspect-ratio: 350/551; /* 350/551 */ // ширина / висота
+            //Властивість aspect-ratio в CSS дозволяє встановити співвідношення ширини до висоти для елемента,
+            // незалежно від його контенту або розмірів. Це зручно для створення адаптивних елементів, які мають певну пропорцію,
+            // наприклад, квадратів, прямокутників або відео.
+            position: relative;
+            overflow: hidden;
+            flex: 0 0 47%;
+
+            .swiper-wrapper {
+              display: inline-flex; // без цього слайдер не працює
+            }
+
+            img {
+              //  дуже важливі налаштування для aspect-ratio
+              height: 100%;
+              object-fit: cover;
+              width: 100%;
+            }
+          }
+        }
+
+        .gallery__info {
+          .gallery__title {
+            // max-width: 520px;
+          }
+
+          .gallety__text {
+            margin-top: 22px;
+          }
+
+          .gallery__link {
+            display: inline-block;
+            margin-top: 45px;
+            padding: 22px 42px;
+            color: var(--text-color-light);
+            background-color: var(--accent-color);
+            font-weight: 500;
+            font-size: 24px;
+            text-decoration: none;
           }
         }
       }

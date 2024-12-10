@@ -235,6 +235,32 @@
           }
         }
       }
+
+      section.gallery {
+        .gallery__container {
+          flex-direction: column;
+
+          .gallery__box {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  body {
+    main.page {
+      section.gallery {
+        .gallery__container {
+          .gallery__info {
+            .gallery__title {
+              max-width: 520px;
+            }
+          }
+        }
+      }
     }
   }
 }
@@ -751,6 +777,23 @@
 
           .hero__img {
             img {
+            }
+          }
+        }
+      }
+
+      section.reviews {
+        .reviews-deco {
+          width: 300px;
+        }
+      }
+
+      section.gallery {
+        .gallery__container {
+          .gallery__info {
+            .gallery__link {
+              display: block;
+              text-align: center;
             }
           }
         }
